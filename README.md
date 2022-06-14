@@ -4,8 +4,8 @@ This repository contains both the code and the data for a contrast sensitivity m
 * spatial frequency in cycles per degree
 * temporal frequency in Hz
 * eccentricity in visual degrees
-* lumunance in cd/m^2 (or nit)
-* area in squared visual degrees
+* luminance in cd/m^2 (or nit)
+* area in visual degrees squared
 
 The detais about the model and the dataset can be found on the project [web site](https://www.cl.cam.ac.uk/research/rainbow/projects/stelaCSF/) and in the paper:
 
@@ -16,7 +16,7 @@ ACM Transactions on Graphics 41, no. 4 (2022): 145.
 
 ## Code
 
-Currently the code is provided as a Matlab class in the directory `matlab`. 
+Currently, the code is provided as a Matlab class in the directory `matlab`. 
 
 ### Example
 
@@ -38,16 +38,16 @@ Check also `matlab/example_plot_csf.m'.
 
 ## Data
 
-Each datapoint represent a Gabor patch at the detection threshold, either for individual observer, or averaged across all observers. The sensitivity is averaged the log-contrast space. 
+Each datapoint represents a Gabor patch at the detection threshold, either for an individual observer, or averaged across all observers. The sensitivity is averaged in log-contrast space. 
 
-The data is stored in 4 CSV files with the following columns
+Data is stored in 4 CSV files with the following columns
 
 * `data_individual.csv` - measurements for individual participants. 
 
 If no individual data is available in a dataset/paper, it is excluded from `data_individual.csv`. 
 
 Columns:
-- observer - The anonymized unique ID of an observer. Some observers can be common across the datasets. 
+- observer - The anonymized unique ID of an observer. Some observers can be common across datasets. 
 - age - age of the observer in years. NaN if it is unknown.
 - luminance - luminance in cd/m^2, using standard CIE luminous efficiency function (or Y of CIE 1931 XYZ)
 - s_frequency - spatial frequency in cycles per degree
